@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 
 function TopNvabar({name = "default"}) {
   return (
-    <div className="w-full h-16 bg-[#ffffff] flex items-center justify-between px-4 border-b border-gray-300 shadow-md rounded-sm text-md">
+    <div className="w-full h-16 bg-[#ffffff] flex items-center justify-between px-4 border-b border-gray-300 text-md">
       <div className="flex items-center gap-2">
         <span className=" font-semibold text-gray-800">{name} </span>
         <FaAngleRight className="text-gray-400" />
