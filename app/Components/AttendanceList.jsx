@@ -23,10 +23,10 @@ export default function AttendanceList() {
         alert("Attendance submitted! Check console for details.");
     }
     return (
-        <div className="bg-[#D8E983]/40 rounded-2xl p-5 w-[360px] shadow">
+        <div className="bg-[#D8E983]/40 rounded-2xl p-5 w-90 shadow">
             <h2 className="text-lg text-gray-700 font-semibold mb-4">Mark Attendance</h2>
 
-            <div className="space-y-3 max-h-[420px] overflow-y-auto">
+            <div className="space-y-3 max-h-105 overflow-y-auto">
                 {students.map(student => (
                     <div
                         key={student.id}

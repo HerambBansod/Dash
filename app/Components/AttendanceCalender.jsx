@@ -36,7 +36,7 @@ export default function Calendar() {
     });
 
     return (
-        <div className="p-6 w-[340px] text-gray-700 bg-[#D8E983]/40 rounded-lg shadow">
+        <div className="p-6 `w-85` text-gray-700 bg-[#D8E983]/40 rounded-lg shadow">
             <div className="flex justify-between mb-4">
                 <button onClick={prevMonth}>◀</button>
                 <h2>{monthName} {year}</h2>
