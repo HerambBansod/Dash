@@ -13,6 +13,7 @@ import {
     Sparkles,
     Building2,
     TvMinimal,
+    User,
 } from "lucide-react";
 
 export default function NavBar() {
@@ -36,6 +37,9 @@ export default function NavBar() {
         { name: "What's New", icon: TvMinimal },
     ];
 
+    const loginMenu =[
+        { name: "Login", icon: User },
+    ]
     const MenuList = ({ title, items }) => (
         <div className="w-full">
             <h1 className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2">
@@ -63,6 +67,8 @@ export default function NavBar() {
         <aside className="w-[260px] bg-[#f1faee] h-screen p-6 flex flex-col gap-8">
             <MenuList title="Main Menu" items={menu} />
             <MenuList title="Settings & News" items={settingMenu} />
+            <MenuList title="Account" items={loginMenu} />
+
         </aside>
     );
 }

@@ -21,8 +21,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <AttendanceCalender />
-            <AttendanceCalender />
+            <div className="flex flex-col h-full w-full ">
+              <AttendanceCalender />
+            </div>
+            <AttendanceList />
             <AttendanceCalender />
           </div>
 
