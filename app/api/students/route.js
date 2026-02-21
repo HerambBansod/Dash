@@ -1,11 +1,28 @@
-// app/api/students/route.js
+import sql from "@/lib/db";
+import { NextResponse } from "next/server";
 
+// GET all attendance
 export async function GET() {
-  const students = [
-    { id: 1, name: "Abhishek", class: "BCA", attendance: 85 },
-    { id: 2, name: "Rahul", class: "BCA", attendance: 78 },
-    { id: 3, name: "Sneha", class: "BCA", attendance: 92 },
-  ];
+  try {
+    const data = await sql`SELECT * FROM attendance ORDER BY date DESC`;
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}
 
-  return Response.json(students);
+// POST new attendance
+export async function POST(request) {
+  try {
+    const { name, date, status } = await request.json();
+
+    await sql`
+      INSERT INTO attendance (name, date, status)
+      VALUES (${name}, ${date}, ${status})
+    `;
+
+    return NextResponse.json({ message: "Attendance added" });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 }

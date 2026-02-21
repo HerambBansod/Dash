@@ -6,7 +6,7 @@ export default function AttendanceList() {
     const [attendance, setAttendance] = useState({});
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("/api/attendance")
             .then(res => res.json())
             .then(data => setStudents(data))
     }, [])

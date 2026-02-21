@@ -6,9 +6,12 @@ import AttendanceList from "./Components/AttendanceList";
 export default function Home() {
   return (
     <main className="bg-[#cccccc] w-full min-w-[332.5px] h-screen flex">
-      <NavBar />
+       
+        
+        <NavBar />
+       
 
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 ">
         <TopNvabar name="Dashboard" />
 
         <div className="flex-1 bg-white p-6 space-y-6">
@@ -30,6 +33,8 @@ export default function Home() {
 
         </div>
       </div>
+     
+      
     </main>
   );
 }
