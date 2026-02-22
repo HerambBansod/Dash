@@ -4,7 +4,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { BiMessageMinus } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 
-function TopNvabar({name = "default"}) {
+function TopNvabar({name = "Abhishek Mukhiya"}) {
   return (
     <div className="w-full h-16 bg-[#ffffff] flex items-center justify-between px-4 border-b border-gray-300 text-md">
       <div className="flex items-center gap-2">
